@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>PonyBuy spreadsheet: guía de tallas, finds y fotos QC</title>
+<meta name="description" content="Explora PonyBuy spreadsheet en español: categorías de ropa y zapatillas, consejos de tallas, lectura de fotos QC y una guía para comparar el coste total.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#592537">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="PonyBuy spreadsheet · El detalle antes que la compra">
+<meta property="og:description" content="Una guía independiente para descubrir categorías, comparar medidas y entender las fotos QC antes de elegir.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://www.tike.gr" crossorigin>
+<style>
+:root{--paper:#faf7f0;--ink:#30272b;--wine:#592537;--rose:#ecdce1;--line:#dbd2ca;--muted:#6c5d62;--white:#fffdf8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+a:focus-visible,summary:focus-visible{outline:3px solid #a65814;outline-offset:5px}
+a:hover{text-decoration:underline;text-underline-offset:5px}
+img{display:block;width:100%;height:auto}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+h1{font-size:clamp(2.7rem,6.5vw,5.7rem);line-height:1.02;letter-spacing:-.055em}
+h2{font-size:clamp(2rem,4vw,3rem);line-height:1.13;letter-spacing:-.035em}
+h3{font-size:1.12rem;line-height:1.35}
+p+p{margin-top:1rem}
+.wrap{max-width:1220px;margin:auto;padding-inline:28px}
+.mast{border-bottom:1px solid var(--line)}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:84px}
+.logo{font-size:1.2rem;font-weight:800;letter-spacing:-.04em}
+.edition,.eyebrow{font-size:.73rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700}
+.edition{color:var(--muted)}
+.toplink{font-size:.85rem;font-weight:650}
+.intro{padding:36px 0 20px;display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+.intro p{font-size:.85rem;color:var(--muted)}
+.categories{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.categories a{padding:14px 15px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.86rem;display:flex;justify-content:space-between;gap:9px;align-items:center}
+.categories a:hover{background:var(--rose);text-decoration:none}
+.categories span{color:var(--wine);font-size:1rem}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:45px;padding:58px 0 48px;align-items:center}
+.hero .eyebrow{color:var(--wine);margin-bottom:22px}
+.hero .lead{font-size:1.08rem;color:var(--muted);max-width:520px;margin:24px 0}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:24px;background:var(--wine);color:#fff;padding:14px 23px;font-size:.9rem;font-weight:650;border:1px solid var(--wine)}
+.button:hover{background:#421829;text-decoration:none}
+.small{font-size:.8rem;color:var(--muted)}
+.hero .small{margin-top:16px}
+.cover{position:relative;background:#eee9e2;border:1px solid var(--line);padding:20px}
+.cover img{aspect-ratio:1;object-fit:contain;background:#fff}
+.cover figcaption{display:flex;justify-content:space-between;gap:18px;padding-top:16px;font-size:.8rem}
+.cover em{font-family:Georgia,serif;font-size:1.15rem;color:var(--wine)}
+.answer{background:var(--wine);color:#fff5ed;padding:30px 34px;display:grid;grid-template-columns:240px 1fr;gap:35px}
+.answer h2{font-size:1.75rem}
+.answer p{font-size:1.02rem;max-width:760px}
+.section{padding:65px 0;border-bottom:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
+.section-head>p{max-width:360px;font-size:.92rem;color:var(--muted)}
+.section-head .eyebrow{margin-bottom:12px;color:var(--wine)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.gallery figure{min-width:0}
+.photo{display:block;background:#efebe6;overflow:hidden;border:1px solid var(--line)}
+.photo img{height:auto;aspect-ratio:4/5;object-fit:contain;background:#fff}
+.gallery figcaption{padding:16px 0 0}
+.gallery h3{font-size:1rem;margin:5px 0 8px}
+.gallery p{font-size:.85rem;color:var(--muted)}
+.number{font-size:.73rem;letter-spacing:.1em;color:var(--wine);font-weight:700}
+.notice{font-size:.79rem;color:var(--muted);margin-top:22px;max-width:950px}
+.guide{display:grid;grid-template-columns:280px 1fr;gap:60px}
+.guide aside p{color:var(--muted);font-size:.93rem;margin:20px 0}
+.article{padding:0 0 26px;margin:0 0 26px;border-bottom:1px solid var(--line)}
+.article:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.article h3{margin-bottom:12px;font-size:1.28rem}
+.article p{color:#53494d}
+.label{display:block;font-size:.73rem;font-weight:700;letter-spacing:.13em;color:var(--wine);margin-bottom:7px}
+.table-scroll{overflow:auto;margin-top:25px}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+caption{text-align:left;font-weight:700;margin-bottom:12px}
+th,td{border-bottom:1px solid var(--line);padding:15px;text-align:left;vertical-align:top}
+th{background:var(--rose);font-weight:650}
+td:first-child{font-weight:650;min-width:140px}
+.cost{background:#eee5dc;padding:28px;margin-top:25px;border-left:3px solid var(--wine)}
+.cost strong{display:block;font-family:Georgia,serif;font-size:1.35rem;font-weight:400;margin-bottom:10px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.split p{margin-top:18px;color:#53494d}
+.checklist{padding:0;margin:22px 0 0;list-style:none}
+.checklist li{border-top:1px solid var(--line);padding:13px 0 13px 28px;position:relative;font-size:.93rem}
+.checklist li:before{content:"✓";position:absolute;left:0;color:var(--wine);font-weight:800}
+.faq{display:grid;grid-template-columns:280px 1fr;gap:60px}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+details:first-child{padding-top:0}
+summary{cursor:pointer;font-size:1rem;font-weight:650;line-height:1.5}
+details p{padding-top:12px;color:#53494d;font-size:.94rem}
+.closing{margin:55px 0;background:var(--rose);padding:38px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.closing h2{font-size:2rem}
+.closing p{margin-top:10px;color:var(--muted)}
+footer{background:#30272b;color:#f7efe9;padding:34px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:35px}
+footer p{max-width:700px;font-size:.79rem;color:#e3d4d6}
+footer .logo{white-space:nowrap}
+.footer-note{margin-top:12px;font-size:.72rem}
+@media(min-width:900px){
+.gallery figure:nth-child(even){margin-top:32px}
+}
+@media(max-width:850px){
+.categories{grid-template-columns:repeat(2,1fr)}
+.hero{grid-template-columns:1fr 1fr;gap:24px}
+.answer{grid-template-columns:1fr;gap:14px}
+.gallery{grid-template-columns:repeat(2,1fr);row-gap:28px}
+.guide,.faq{grid-template-columns:1fr;gap:28px}
+.split{gap:28px}
+.edition{display:none}
+.closing{padding:28px}
+}
+@media(max-width:580px){
+.wrap{padding-inline:20px}
+.mast .wrap{min-height:70px}
+.logo{font-size:1.05rem}
+.toplink{font-size:.78rem}
+.intro{display:block;padding-top:23px}
+.intro p{margin-top:6px}
+.categories a{padding:12px;font-size:.78rem}
+.hero{grid-template-columns:1fr;padding:35px 0}
+.hero .lead{font-size:1rem}
+.cover{padding:14px}
+.cover img{aspect-ratio:4/3}
+.answer{padding:26px}
+.section{padding:42px 0}
+.section-head{display:block}
+.section-head>p{margin-top:16px}
+.gallery{gap:16px}
+.gallery p{font-size:.8rem}
+.gallery h3{font-size:.95rem}
+.split{grid-template-columns:1fr}
+.closing{display:block;margin:35px 0}
+.closing .button{margin-top:22px}
+footer .wrap{display:block}
+footer p{margin-top:16px}
+th,td{padding:12px}
+.cost{padding:20px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "@id":"#pagina",
+      "name":"PonyBuy spreadsheet: guía de tallas, finds y fotos QC",
+      "inLanguage":"es",
+      "description":"Guía independiente para explorar categorías, comparar medidas, leer fotos QC y estimar el coste total.",
+      "mainEntity":{"@id":"#guia"}
+    },
+    {
+      "@type":"Article",
+      "@id":"#guia",
+      "headline":"Guía PonyBuy: de una foto a una elección concreta",
+      "inLanguage":"es",
+      "description":"Cómo organizar enlaces, comprobar tallas y variantes, interpretar fotos QC y comparar el coste total antes de comprar.",
+      "author":{
+        "@type":"Organization",
+        "name":"Mesa editorial de esta guía independiente"
+      },
+      "about":[
+        {"@type":"Thing","name":"PonyBuy spreadsheet"},
+        {"@type":"Thing","name":"Comparación de tallas y variantes"},
+        {"@type":"Thing","name":"Fotos QC"}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "inLanguage":"es",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"¿Qué es PonyBuy spreadsheet?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Es una expresión utilizada para buscar recopilaciones de enlaces de productos organizadas por categorías. Puede referirse a una hoja de cálculo o a un catálogo web; cada ficha requiere comprobar sus datos en el anuncio de origen."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"¿Adónde llevan los enlaces de esta página?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Los botones generales llevan a la portada de HipobuyFind. Los diez enlaces de categorías abren sus secciones correspondientes en HipobuyFind. Esta página no ofrece un archivo de hoja de cálculo para descargar."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"¿Las fotos QC demuestran autenticidad?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No. Las fotos QC pueden ayudar a revisar detalles visibles de la unidad fotografiada, pero no certifican autenticidad, composición, durabilidad ni rendimiento. Una foto comercial tampoco sustituye esa comprobación."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"¿Cómo elijo la talla de zapatillas o ropa?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Compara la tabla del anuncio con medidas propias o de una prenda que te quede bien. Para zapatillas, utiliza la longitud del pie y la guía del vendedor; para ropa, comprueba pecho, largo y manga en centímetros."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"¿El precio del artículo incluye el envío?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No debes darlo por supuesto. Revisa el artículo, el transporte local, las comisiones, el transporte internacional y los impuestos aplicables. El total depende de la variante, del destino y de las condiciones vigentes del servicio."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"¿Puedo utilizar cualquier enlace con PonyBuy?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"La compatibilidad depende del mercado de origen, el producto y las condiciones actuales del servicio. Confirma directamente si acepta el enlace y permite comprar y enviar ese artículo a tu destino antes de pagar."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"¿Esta página es oficial de PonyBuy o de las marcas?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No. Es una guía independiente sin afiliación oficial con PonyBuy, Nike, Louis Vuitton, Gucci, Hermès o Dior. Las imágenes son referencias visuales y no anuncian existencias ni productos autenticados en el destino."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!--
+index.html.
+Documento estático independiente.
+No se fija una URL canónica sin conocer el dominio de publicación.
+
+Investigación editorial: consulta «PonyBuy spreadsheet», 8 de noviembre de 2026.
+La URL de búsqueda de Bing no fue accesible: no se verificó su primera
+página ni el orden de diez resultados.
+
+Páginas localizadas mediante búsqueda alternativa, sin afirmar clasificación en Bing:
+spreadsheetponybuy.com
+ponybuypicklist.com
+qcradar.com/ponybuy-spreadsheet
+ponybuyfind.com/spreadsheet-listings/
+ponybuy.io
+ponybuyspreadsheets.com
+taofind.com/spreadsheets/ponybuy
+jadeship.com/search/spreadsheet/ponybuy
+ponybuyreps.com/spreadsheet
+
+Cuatro temas secundarios:
+PonyBuy finds; guía PonyBuy; PonyBuy QC; tallas PonyBuy.
+
+Veinticuatro intenciones largas integradas en el contenido:
+zapatillas blancas, talla en centímetros, longitud del pie,
+tabla del vendedor, sudaderas con cremallera, pecho en plano,
+largo de manga, camisetas de algodón, composición del tejido,
+pantalones cortos, medida de cintura, conjuntos deportivos,
+gorras ajustables, contorno de cabeza, collares de eslabones,
+longitud del collar, cierre de bolso, costuras de chaqueta,
+fotos de almacén, variante de color, enlace original,
+envío internacional, coste total y condiciones de devolución.
+-->
+<link rel="canonical" href="https://kakobuyfinds.github.io/narat/">
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <a class="logo" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+    <span class="edition">Cuaderno de estilo · En español</span>
+    <a class="toplink" href="https://www.hipobuyfind.com">Explorar catálogo ↗</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav aria-label="Categorías de HipobuyFind">
+    <div class="intro">
+      <h2 style="font:700 .8rem system-ui;letter-spacing:.12em;text-transform:uppercase">Primero, elige una categoría</h2>
+      <p>Acceso directo al catálogo de HipobuyFind</p>
+    </div>
+    <div class="categories">
+      <a href="https://hipobuyfind.com/category-911-Shoes.html">Zapatillas / Shoes <span aria-hidden="true">↗</span></a>
+      <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Sudaderas / Hoodies &amp; Sweaters <span aria-hidden="true">↗</span></a>
+      <a href="https://hipobuyfind.com/category-913-T-Shirts.html">Camisetas / T-Shirts <span aria-hidden="true">↗</span></a>
+      <a href="https://hipobuyfind.com/category-914-Jackets.html">Chaquetas / Jackets <span aria-hidden="true">↗</span></a>
+      <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Pantalones / Pants &amp; Shorts <span aria-hidden="true">↗</span></a>
+      <a href="https://hipobuyfind.com/category-916-Headwear.html">Gorras / Headwear <span aria-hidden="true">↗</span></a>
+      <a href="https://hipobuyfind.com/category-917-Sets.html">Conjuntos / Sets <span aria-hidden="true">↗</span></a>
+      <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Ropa interior / Underwear <span aria-hidden="true">↗</span></a>
+      <a href="https://hipobuyfind.com/category-919-Jersey.html">Camisetas deportivas / Jersey <span aria-hidden="true">↗</span></a>
+      <a href="https://hipobuyfind.com/category-920-Accessories.html">Complementos / Accessories <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+
+  <section class="hero" aria-labelledby="principal">
+    <div>
+      <p class="eyebrow">Selección con criterio / Guía independiente</p>
+      <h1 id="principal">PonyBuy spreadsheet</h1>
+      <p class="serif" style="font-size:clamp(1.5rem,3vw,2rem);margin-top:20px;color:var(--wine)">El detalle antes que la compra.</p>
+      <p class="lead">Empieza por la silueta que te interesa. Después, compara medidas, variantes y condiciones. Una buena selección se construye con información concreta, no solo con una fotografía atractiva.</p>
+      <a class="button" href="https://www.hipobuyfind.com">Descubrir HipobuyFind <span aria-hidden="true">↗</span></a>
+      <p class="small">Los botones generales abren HipobuyFind, un catálogo externo a esta guía.</p>
+    </div>
+    <figure class="cover">
+      <img src="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp" alt="Vista lateral de una zapatilla Nike Air Force 1 blanca con Swoosh y suela blanca" width="640" height="640" loading="eager" fetchpriority="high" decoding="async">
+      <figcaption>
+        <span>01 / Referencia visual · Nike Air Force 1</span>
+        <em>Forma, talla, detalle.</em>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="answer" aria-labelledby="definicion">
+    <h2 id="definicion">¿Qué estás buscando, exactamente?</h2>
+    <p>Una <strong>PonyBuy spreadsheet</strong> reúne enlaces de productos para facilitar su exploración y comparación. El nombre puede describir una hoja de cálculo o un catálogo web. Esta página ofrece una guía en español y accesos a categorías de HipobuyFind; no procesa pedidos ni ofrece una hoja para descargar.</p>
+  </section>
+
+  <section class="section" aria-labelledby="referencias">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">PonyBuy finds / Mirar con intención</p>
+        <h2 id="referencias">Cuatro referencias.<br>Cuatro cosas que comprobar.</h2>
+      </div>
+      <p>Estas fotografías ilustran detalles de diseño. No representan stock confirmado ni fichas concretas del catálogo de destino.</p>
+    </div>
+
+    <div class="gallery">
+      <figure>
+        <a class="photo" href="https://www.hipobuyfind.com" aria-label="Explorar el catálogo de HipobuyFind tras ver la referencia Nike">
+          <img src="https://sportland.lv/media/catalog/product/cache/0e671b3ea246d743ae77ca54ee29011a/H/V/HV0949_476_b66f.jpg" alt="Chaqueta Nike Tech Fleece Windrunner azul con capucha y cremallera frontal" width="480" height="600" loading="lazy" decoding="async">
+        </a>
+        <figcaption>
+          <span class="number">01 / ROPA</span>
+          <h3>El corte de una chaqueta</h3>
+          <p>En sudaderas con cremallera, compara pecho en plano, largo de manga y posición de bolsillos. Una talla habitual no sustituye esas medidas.</p>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <a class="photo" href="https://www.hipobuyfind.com" aria-label="Explorar el catálogo de HipobuyFind tras ver la referencia Gucci">
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" alt="Gorra Gucci de lona beige y marrón con motivo GG" width="480" height="600" loading="lazy" decoding="async">
+        </a>
+        <figcaption>
+          <span class="number">02 / GORRAS</span>
+          <h3>El ajuste también cuenta</h3>
+          <p>Para gorras ajustables, busca el rango de contorno de cabeza y revisa el cierre. El dibujo del tejido no dice cuánto puede regularse.</p>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <a class="photo" href="https://www.hipobuyfind.com" aria-label="Explorar el catálogo de HipobuyFind tras ver las referencias de bolsos">
+          <img src="https://luxlexicon.com/cdn/shop/files/llweb_aboutpagebanner_750x480px_5a3a9c48-a24b-480f-8077-021c570eb4d9.jpg?v=1725537886&amp;width=800" alt="Composición de bolsos Dior, Hermès y Louis Vuitton sobre un fondo rosa claro" width="480" height="600" loading="lazy" decoding="async">
+        </a>
+        <figcaption>
+          <span class="number">03 / COMPLEMENTOS</span>
+          <h3>Más allá del monograma</h3>
+          <p>En referencias de LV, Hermès y Dior, observa proporciones y cierre de bolso. Pide dimensiones y fotos del interior si la capacidad es decisiva.</p>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <a class="photo" href="https://www.hipobuyfind.com" aria-label="Explorar el catálogo de HipobuyFind tras ver la referencia Dior">
+          <img src="https://assets.christiandior.com/is/image/diorprod/N1713MTGMTD300_E01?%24default_GHC%24=&amp;crop=241%2C107%2C1524%2C1529" alt="Collar Dior 30 Montaigne de eslabones con acabado dorado y motivo CD" width="480" height="600" loading="lazy" decoding="async">
+        </a>
+        <figcaption>
+          <span class="number">04 / BISUTERÍA</span>
+          <h3>La medida del detalle</h3>
+          <p>En collares de eslabones, confirma longitud del collar, ajuste y composición declarada. El color dorado de una imagen no identifica el metal.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="notice">Imágenes de referencia procedentes de Tike, Sportland, Gucci, LuxLexicon y Dior. Se utilizan para explicar qué observar; no son fotos QC de un pedido ni acreditan autenticidad, disponibilidad o afiliación comercial.</p>
+  </section>
+
+  <section class="section guide" aria-labelledby="guia">
+    <aside>
+      <p class="eyebrow">Guía PonyBuy / Lectura práctica</p>
+      <h2 id="guia">De una foto a una elección concreta.</h2>
+      <p>Conserva el enlace original y anota la opción exacta. Así podrás distinguir un parecido visual de una coincidencia real.</p>
+      <a class="toplink" href="https://www.hipobuyfind.com">Abrir el catálogo ↗</a>
+    </aside>
+
+    <div>
+      <article class="article">
+        <span class="label">01 / ENCONTRAR</span>
+        <h3>Describe la prenda antes de buscar la marca</h3>
+        <p>Para ordenar tus PonyBuy finds, empieza por el uso y la forma: zapatillas blancas de perfil bajo, camisetas de algodón con cuello redondo o pantalones cortos con bolsillos. Esas características ayudan a comparar anuncios aunque sus títulos sean distintos. Comprueba después la composición del tejido: una imagen no demuestra que una prenda sea de algodón.</p>
+        <p>En conjuntos deportivos, confirma si el anuncio incluye ambas piezas. Para camisetas deportivas, revisa la versión, los parches y las opciones de personalización. Una foto de conjunto puede acompañar una opción que vende una sola pieza.</p>
+      </article>
+
+      <article class="article">
+        <span class="label">02 / MEDIR</span>
+        <h3>Tallas PonyBuy: compara centímetros, no etiquetas</h3>
+        <p>Para zapatillas, mide la longitud del pie y utiliza la tabla del vendedor correspondiente al modelo. Comprueba si la medida publicada se refiere al pie, a la plantilla o a otra referencia. No asumas que una talla EU coincide entre todos los anuncios.</p>
+        <p>Para ropa, compara las medidas con una prenda que ya te quede bien. El pecho en plano no equivale al contorno completo. En pantalones, revisa la medida de cintura, el tiro y el largo; una cintura elástica puede tener un rango que conviene confirmar.</p>
+      </article>
+
+      <article class="article">
+        <span class="label">03 / OBSERVAR</span>
+        <h3>PonyBuy QC: pide una imagen que resuelva una duda</h3>
+        <p>Si el servicio ofrece fotos de almacén, úsalas para revisar la variante de color, las costuras de chaqueta, la posición del estampado o el estado visible del cierre. Solicitar una foto de una medida concreta suele ser más útil que pedir simplemente «más calidad».</p>
+        <p>Una fotografía de control de calidad muestra la unidad fotografiada en ese momento. No demuestra autenticidad, resistencia al uso ni composición del material. Comprueba el alcance, el coste de imágenes adicionales y las condiciones de devolución directamente con el servicio que gestione la compra.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="comparacion">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Tu lista corta / Datos que importan</p>
+        <h2 id="comparacion">Compara la misma variante.</h2>
+      </div>
+      <p>Dos fotos similares pueden corresponder a materiales, vendedores o paquetes diferentes. Lo desconocido debe quedar anotado.</p>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <caption>Ficha de comparación antes de decidir</caption>
+        <thead>
+          <tr>
+            <th scope="col">Dato</th>
+            <th scope="col">Qué guardar</th>
+            <th scope="col">Qué revisar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Origen</th>
+            <td>Enlace original y vendedor.</td>
+            <td>Que la ficha siga abierta y describa el mismo producto.</td>
+          </tr>
+          <tr>
+            <th scope="row">Variante</th>
+            <td>Color, versión, talla y cantidad.</td>
+            <td>Que la opción seleccionada coincida con las fotos que comparas.</td>
+          </tr>
+          <tr>
+            <th scope="row">Medidas</th>
+            <td>Tabla de tallas y medidas en centímetros.</td>
+            <td>El método de medición y las tolerancias indicadas.</td>
+          </tr>
+          <tr>
+            <th scope="row">Material</th>
+            <td>Composición declarada en el anuncio.</td>
+            <td>Qué está documentado y qué solo parece apreciarse en la foto.</td>
+          </tr>
+          <tr>
+            <th scope="row">Inspección</th>
+            <td>Fotos QC disponibles y dudas pendientes.</td>
+            <td>Si hace falta una medición o un primer plano adicional.</td>
+          </tr>
+          <tr>
+            <th scope="row">Condiciones</th>
+            <td>Importe, moneda, envío y devolución.</td>
+            <td>La fecha de consulta y el total actualizado antes de pagar.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cost">
+      <strong>El coste total empieza donde termina el precio de la ficha.</strong>
+      <p>Artículo + transporte local + comisiones del servicio + envío internacional + impuestos aplicables. Comprueba qué conceptos ya están incluidos para no sumarlos dos veces. El destino, el peso facturable y el volumen del paquete pueden cambiar la estimación.</p>
+    </div>
+  </section>
+
+  <section class="section split" aria-labelledby="antes">
+    <article>
+      <p class="eyebrow">Tema / Preparar una compra</p>
+      <h2 id="antes">Antes de enviar un enlace.</h2>
+      <p>Encontrar un artículo mediante PonyBuy spreadsheet no confirma que un agente pueda comprarlo o enviarlo. Revisa las condiciones actuales del servicio elegido y las restricciones para tu destino.</p>
+      <ul class="checklist">
+        <li>Confirma que el mercado de origen y el artículo sean compatibles.</li>
+        <li>Guarda la opción exacta y cualquier instrucción de talla.</li>
+        <li>Consulta las reglas de inspección, devolución y reembolso.</li>
+        <li>Verifica el importe y la disponibilidad antes de pagar.</li>
+      </ul>
+    </article>
+
+    <article>
+      <p class="eyebrow">Tema / Elegir con menos dudas</p>
+      <h2>Si una ficha no explica lo suficiente.</h2>
+      <p>No completes la información con suposiciones. Si faltan la longitud de una cadena, las medidas de una sudadera o el material de un accesorio, pide ese dato antes de compararlo con otra opción.</p>
+      <p>En ropa interior, confirma también las condiciones de devolución que correspondan a ese producto. Para una entrega en España u otro país, consulta los cargos y requisitos aplicables a tu caso con el servicio y las fuentes oficiales pertinentes.</p>
+      <p>Una selección pequeña con medidas y condiciones claras resulta más útil que una lista larga de enlaces sin revisar.</p>
+    </article>
+  </section>
+
+  <section class="section faq" aria-labelledby="preguntas">
+    <div>
+      <p class="eyebrow">Respuestas directas</p>
+      <h2 id="preguntas">Lo que conviene saber.</h2>
+    </div>
+
+    <div>
+      <details open>
+        <summary>¿Qué es PonyBuy spreadsheet?</summary>
+        <p>Es una expresión utilizada para buscar recopilaciones de enlaces de productos organizadas por categorías. Puede referirse a una hoja de cálculo o a un catálogo web; cada ficha requiere comprobar sus datos en el anuncio de origen.</p>
+      </details>
+
+      <details>
+        <summary>¿Adónde llevan los enlaces de esta página?</summary>
+        <p>Los botones generales llevan a la portada de HipobuyFind. Los diez enlaces de categorías abren sus secciones correspondientes en HipobuyFind. Esta página no ofrece un archivo de hoja de cálculo para descargar.</p>
+      </details>
+
+      <details>
+        <summary>¿Las fotos QC demuestran autenticidad?</summary>
+        <p>No. Las fotos QC pueden ayudar a revisar detalles visibles de la unidad fotografiada, pero no certifican autenticidad, composición, durabilidad ni rendimiento. Una foto comercial tampoco sustituye esa comprobación.</p>
+      </details>
+
+      <details>
+        <summary>¿Cómo elijo la talla de zapatillas o ropa?</summary>
+        <p>Compara la tabla del anuncio con medidas propias o de una prenda que te quede bien. Para zapatillas, utiliza la longitud del pie y la guía del vendedor; para ropa, comprueba pecho, largo y manga en centímetros.</p>
+      </details>
+
+      <details>
+        <summary>¿El precio del artículo incluye el envío?</summary>
+        <p>No debes darlo por supuesto. Revisa el artículo, el transporte local, las comisiones, el transporte internacional y los impuestos aplicables. El total depende de la variante, del destino y de las condiciones vigentes del servicio.</p>
+      </details>
+
+      <details>
+        <summary>¿Puedo utilizar cualquier enlace con PonyBuy?</summary>
+        <p>La compatibilidad depende del mercado de origen, el producto y las condiciones actuales del servicio. Confirma directamente si acepta el enlace y permite comprar y enviar ese artículo a tu destino antes de pagar.</p>
+      </details>
+
+      <details>
+        <summary>¿Esta página es oficial de PonyBuy o de las marcas?</summary>
+        <p>No. Es una guía independiente sin afiliación oficial con PonyBuy, Nike, Louis Vuitton, Gucci, Hermès o Dior. Las imágenes son referencias visuales y no anuncian existencias ni productos autenticados en el destino.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="closing" aria-label="Continuar al catálogo">
+    <div>
+      <h2>Empieza por una categoría.<br>Quédate con los detalles.</h2>
+      <p>Explora HipobuyFind y construye tu propia lista de comparación.</p>
+    </div>
+    <a class="button" href="https://www.hipobuyfind.com">Ver el catálogo <span aria-hidden="true">↗</span></a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+    <div>
+      <p>Guía editorial independiente en español sobre PonyBuy spreadsheet. No vende productos ni gestiona pagos, almacenes o entregas. Las marcas se mencionan para identificar referencias visuales; no existe afiliación oficial ni respaldo de sus titulares.</p>
+      <p class="footer-note">Consulta siempre la ficha de origen y las condiciones actuales del vendedor o servicio elegido.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
